@@ -4,7 +4,7 @@
 #include <string>
 #include "qdebug.h"
 #include <iostream>
-#include "obmkdisk.h"
+#include "mkdisk.h"
 using namespace std;
 extern int yylineno; //linea actual donde se encuentra el parser (analisis lexico) lo maneja BISON
 extern int columna; //columna actual donde se encuentra el parser (analisis lexico) lo maneja BISON
