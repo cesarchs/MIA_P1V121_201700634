@@ -26,7 +26,7 @@ return 0;
 //char TEXT [256];
 //QString TEXT;
 char TEXT[256];
-class obmkdisk *mdisk;
+class mkdisk *mdisk;
 
 }
 //TERMINALES DE TIPO TEXT, SON STRINGS
