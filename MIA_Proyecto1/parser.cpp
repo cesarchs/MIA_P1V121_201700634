@@ -1374,7 +1374,7 @@ yyreduce:
     {
 
 
-(yyvsp[0].mdisk)->mostrardatos((yyvsp[0].mdisk));//ejecuto el metodo "mostrardatos" del objeto retornado en COMANDOMKDISK
+(yyvsp[0].mdisk)->mostrardatos((yyvsp[0].mdisk)); //ejecuto el metodo "mostrardatos" del objeto retornado en COMANDOMKDISK
 printf("estoy en lexpa primera produccion");
 }
 #line 1381 "parser.cpp" /* yacc.c:1646  */
@@ -1382,7 +1382,7 @@ printf("estoy en lexpa primera produccion");
 
   case 4:
 #line 93 "parser.y" /* yacc.c:1646  */
-    {int tam=atoi((yyvsp[0].TEXT)); obmkdisk *disco=new obmkdisk(); disco->size=tam;  (yyval.mdisk)=disco;}
+    {int tam=atoi((yyvsp[0].TEXT)); mkdisk *disco=new mkdisk(); disco->size=tam;  (yyval.mdisk)=disco;}
 #line 1387 "parser.cpp" /* yacc.c:1646  */
     break;
 

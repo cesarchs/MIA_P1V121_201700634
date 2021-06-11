@@ -19,7 +19,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    lexico.l
+    lexico.l \
+    parser.y
 
 HEADERS += \
     mkdisk.h \
