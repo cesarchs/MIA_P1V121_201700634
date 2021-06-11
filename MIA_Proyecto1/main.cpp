@@ -25,17 +25,17 @@ extern int yylineno;
 int main(int argc, char *argv[])
 {
 
-    string p="------------------------------Ingrese un comando------------------------------\n";
+    string p="----------------------------- ENTER COMMANDS ----------------------------------\n";
 
 
 
     QTextStream qtin(stdin);
     QString line;
 
-    while(line!="salir"){    //esto me sirve para seguir leyendo siempre los comandos sin salirme
+    while(line!="exit"){    //esto me sirve para seguir leyendo siempre los comandos sin salirme
         cout << p;
         line = qtin.readLine();
-        if(line!="salir"){
+        if(line!="exit"){
             if(line.isEmpty()==false){
                 YY_BUFFER_STATE buffer = yy_scan_string(line.toUtf8().constData());
 
@@ -51,15 +51,11 @@ int main(int argc, char *argv[])
 
                 }else {
 
-                    printf("\n\nhay errores\n\n");
+                    printf("\n\nthere are erros\n\n");
                 }
-
             }
         }
-
     }
-
-
 }
 
 
