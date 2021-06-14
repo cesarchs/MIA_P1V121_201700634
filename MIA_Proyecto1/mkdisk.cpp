@@ -2,6 +2,7 @@
 //#include "estructuras.h"
 #include <stdio.h>
 #include <string.h>
+#include "estructuras.h"
 using namespace std;
 
 mkdisk::mkdisk()

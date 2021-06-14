@@ -8,6 +8,7 @@ CONFIG -= app_bundle
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        estructuras.cpp \
         main.cpp \
         mkdisk.cpp \
         parser.cpp \
@@ -23,6 +24,7 @@ DISTFILES += \
     parser.y
 
 HEADERS += \
+    estructuras.h \
     mkdisk.h \
     parser.h \
     scanner.h
