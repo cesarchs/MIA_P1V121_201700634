@@ -15,7 +15,7 @@ public:
     string unit;
     string path;
     string ajuste;
-
+    string fechacreacion;
 
     void mostrardatos (mkdisk *disco);// se le pasa un puntero, se trabaja por referencia, es decir la direccion del objeto
     void ejecutar (mkdisk *disco);// este para que aca haga todos los procesos de creacion de lo que pidan para este metodo
