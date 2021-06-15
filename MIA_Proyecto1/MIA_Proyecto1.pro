@@ -9,6 +9,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
         estructuras.cpp \
+        fdisk.cpp \
         main.cpp \
         mkdisk.cpp \
         parser.cpp \
@@ -25,6 +26,7 @@ DISTFILES += \
 
 HEADERS += \
     estructuras.h \
+    fdisk.h \
     mkdisk.h \
     parser.h \
     scanner.h

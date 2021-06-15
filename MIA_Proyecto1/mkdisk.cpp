@@ -21,21 +21,20 @@ void mkdisk::crearFichero(mkdisk *disco)
 {
     mbr prueba;
     FILE *arch;
-    arch=fopen(disco->path.c_str(),"wb");
-    if (arch==NULL)
+             arch=fopen(disco->path.c_str(),"wb");
+             if (arch==NULL)
         exit(1);
     //simulo un KB
     char buffer[1024];
 
     //si son Kb
     if (disco->unit=="k"){
-        //-------ASIGNO TAMAÑO A MBR, RECORDAR QUE ESTE LO PIDE EN BYTES POR LO que multiplico el size por 1024
         prueba.mbr_tamano=disco->size*1024;
 
         for(int i = 0 ; i < 1024 ; i++)
             buffer[i]='\0';
 
-        for(int i = 0 ; i < (disco->size) ; i++)
+                      for(int i = 0 ; i < (disco->size) ; i++)
             fwrite(&buffer,1024,1,arch);
 
 
@@ -43,25 +42,27 @@ void mkdisk::crearFichero(mkdisk *disco)
     }
 
     //Si son megas
-    else if(disco->unit=="m" || disco->unit.empty()==1){
+                     else if(disco->unit=="m" || disco->unit.empty()==1){
         prueba.mbr_tamano=disco->size*1024*1024;//LO DOY EN BYTES
         for(int i = 0 ; i < 1024 ; i++)
             buffer[i]='\0';
-        for(int i = 0 ; i < (disco->size*1024) ; i++)//para mb multiplicar por 1024
+        for(int i = 0 ; i < (disco->size*1024) ; i++)
             fwrite(&buffer,1024,1,arch);
         fclose(arch);
     }
 
-    //----ASIGNO UNA ETIQUETA UNICA PARA EL DISCO
 
 
-    //--ASIGNO UNA FECHA, EN SU CASO TIENE QUE SER LA FECHA Y HORA EN TIEMPO REAL, AQUI SE ESTA QUEMANDO UNA
-    string fecha="11/02/2020 11:10"; //fecha quemanda con fines de ejemplo
+              string fecha="11/02/2020 11:10"; //fecha quemanda con fines de ejemplo
+
+
     disco->fechacreacion=fecha;
 
-    //AHORA DOY DATOS AL MBR
+
+
+
     prueba.mbr_disk_signature=(rand() % 100);//numero random para darle etiqueta al disco
-    strcpy ( prueba.mbr_fecha_creacion, fecha.c_str()); //aqui copio el string de fecha y lo vuelvo char *
+                strcpy ( prueba.mbr_fecha_creacion, fecha.c_str()); //aqui copio el string de fecha y lo vuelvo char *
 
 
     //----SI EL FIT VIENE VACIO SE ASIGNA POR DEFECTO PRIMER AJUSTE
