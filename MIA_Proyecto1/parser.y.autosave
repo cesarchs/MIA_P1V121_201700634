@@ -82,16 +82,14 @@ LEXPA:  pmkdisk COMANDOMKDISK
 {
 
 
-$2->crearFichero($2); //ejecuto el metodo "mostrardatos" del objeto retornado en COMANDOMKDISK
+$2->mostrardatos($2); //ejecuto el metodo "mostrardatos" del objeto retornado en COMANDOMKDISK
 printf("estoy en lexpa primera produccion");
-
 }
 
 
 ;
 
 COMANDOMKDISK:
-
 menos psize igual entero {int tam=atoi($4); mkdisk *disco=new mkdisk(); disco->size=tam;  $$=disco;}
 ;
 

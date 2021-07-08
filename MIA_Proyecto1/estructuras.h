@@ -21,9 +21,6 @@ typedef struct{
 }mbr;
 
 
-
-
-
 typedef struct{
    char Journal_Tipo_Operacion[10] ; //mkfs,mkfile,...etc
    char Journal_tipo; //Carpeta(0), Archivo(1).
@@ -44,18 +41,10 @@ typedef struct{
 }ebr;
 
 
-
-
-
-
-
-
 class estructuras
 {
 public:
     estructuras();
-
-
 
 };
 

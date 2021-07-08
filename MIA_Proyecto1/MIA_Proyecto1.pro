@@ -13,6 +13,7 @@ SOURCES += \
         main.cpp \
         mkdisk.cpp \
         parser.cpp \
+        rmdisk.cpp \
         scanner.cpp
 
 # Default rules for deployment.
@@ -29,4 +30,5 @@ HEADERS += \
     fdisk.h \
     mkdisk.h \
     parser.h \
+    rmdisk.h \
     scanner.h
